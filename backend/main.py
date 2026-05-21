@@ -90,7 +90,7 @@ def on_startup() -> None:
     finally:
         db.close()
     if predict_service.inference_assets_ready():
-        predict_service.warm_model()
+        #predict_service.warm_model()
         logger.info("Modelo ML listo.")
     else:
         logger.warning(
