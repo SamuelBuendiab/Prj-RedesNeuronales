@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.db
+static/assets/
+static/index.html
+static/favicon.svg
+uploads/*
+!uploads/.gitkeep
+models/model.pkl
+node_modules/
+frontend/node_modules/
+.DS_Store
