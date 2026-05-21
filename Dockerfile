@@ -51,6 +51,6 @@ ENV UPLOADS_DIR=/app/uploads
 EXPOSE 8080
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=180s --retries=3 \
-  CMD-SHELL curl -sf "http://127.0.0.1:$${PORT:-8080}/api/health" || exit 1
+  CMD curl -sf "http://127.0.0.1:${PORT:-8080}/api/health" || exit 1
 
 CMD ["sh", "-c", "exec uvicorn backend.main:app --host 0.0.0.0 --port ${PORT:-8080} --workers 1"]
